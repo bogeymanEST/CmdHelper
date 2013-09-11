@@ -1,0 +1,70 @@
+entity:
+	type: "map"
+	values:
+		id:
+			type: "string"
+		Pos:
+			type: "tuple"
+			values: ["x", "y", "z"]
+		Motion:
+			type: "tuple"
+			values: ["x", "y", "z"]
+		Rotation:
+			type: "tuple"
+			values: ["yaw", "pitch"]
+		FallDistance:
+			type: "float"
+		Fire:
+			type: "int"
+		Air:
+			type: "int"
+		OnGround:
+			type: "bool"
+		Invulnerable:
+			type: "bool"
+		Riding:
+			include: "entity"
+
+mob:
+	include: "entity"
+	type: "map"
+	values:
+		Health:
+			type: "int"
+		AbsorbtionAmount:
+			type: "float"
+		AttackTime:
+			type: "int"
+		HurtTime:
+			type: "int"
+		DeathTime:
+			type: "int"
+		Attributes:
+			type: "list"
+			values: "attribute"
+
+
+attribute:
+	type: "map"
+	values:
+		Name:
+			type: "string"
+		Base:
+			type: "float"
+		Modifiers:
+			type: "list"
+			values: "modifier"
+
+modifier:
+	type: "map"
+	values:
+		Name:
+			type: "string"
+		Base:
+			type: "float"
+		Operation:
+			type: "enum"
+			values:
+				0: "Increment Base by Amount"
+				1: "Increment Base by Amount*Base"
+				2: "Increment "
