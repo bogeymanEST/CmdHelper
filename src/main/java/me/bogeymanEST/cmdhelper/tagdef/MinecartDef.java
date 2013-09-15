@@ -24,10 +24,15 @@ package me.bogeymanEST.cmdhelper.tagdef;
  * Time: 10:15
  */
 public class MinecartDef extends VehicleDef {
-    public Byte CustomDisplayTile;
+    @Info("1 if a custom tile should be displayed in the minecart")
+    public Boolean CustomDisplayTile;
+    @Info("The ID of the custom tile")
     public Integer DisplayTile;
+    @Info("The data of the custom tile")
     public Integer DisplayData;
+    @Info("Vertical offset of the custom tile. Positive offsets move the tile up, negatives down. Value of 16 moves tile up by one block.")
     public Integer DisplayOffest;
+    @Info("The name of this minecart")
     public String CustomName;
 
     @Override

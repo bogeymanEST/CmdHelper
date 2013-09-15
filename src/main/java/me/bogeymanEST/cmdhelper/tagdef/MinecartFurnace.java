@@ -24,8 +24,11 @@ package me.bogeymanEST.cmdhelper.tagdef;
  * Time: 10:18
  */
 public class MinecartFurnace extends MinecartDef {
+    @Info("Force along X axis, used for smooth acceleration/deceleration.")
     public Double PushZ;
+    @Info("Force along X axis, used for smooth acceleration/deceleration.")
     public Double PushX;
+    @Info("The number of ticks until the minecart runs out of fuel.")
     public Short Fuel;
 
     @Override

@@ -24,8 +24,8 @@ package me.bogeymanEST.cmdhelper.tagdef;
  * Time: 15:22
  */
 public class WolfDef extends MobDef {
-    @Info("1 or 0 - 1 if the wolf is angry.")
-    public Byte Angry;
+    @Info("1 if the wolf is angry.")
+    public Boolean Angry;
     @Info("The dye color of this wolf's collar. Present even for wild wolves (but does not render); Default value is 14.")
     public Byte CollarColor;
 

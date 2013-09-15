@@ -26,10 +26,10 @@ import java.util.List;
  * Time: 11:22
  */
 public class ExplosionDef implements TagDef {
-    @Info("1 or 0 - 1 if this explosion will have the Twinkle effect (glowstone dust)")
-    public Byte Flicker;
-    @Info("1 or 0 - 1 if this explosion will have the Trail effect (diamond).")
-    public Byte Trail;
+    @Info("1 if this explosion will have the Twinkle effect (glowstone dust)")
+    public Boolean Flicker;
+    @Info("1 if this explosion will have the Trail effect (diamond).")
+    public Boolean Trail;
     @Info("The shape of this firework's explosion. 0 = Small Ball, 1 = Large Ball, 2 = Star-shaped, 3 = Creeper-shaped, 4 = Burst. Other values will be named \"Unknown Shape\" and render as Small Ball.")
     public Byte Type;
     @Info("List of primary colors")

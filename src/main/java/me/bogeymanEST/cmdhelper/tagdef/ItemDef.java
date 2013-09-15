@@ -26,12 +26,14 @@ package me.bogeymanEST.cmdhelper.tagdef;
 @SuppressWarnings("UnusedDeclaration")
 public class ItemDef implements TagDef {
     @Info("The slot ID this item occupies in containers")
+    @Min(0)
     public Byte Slot;
     @Info("The name or block ID of this item")
     public String id;
     @Info("The damage value")
     public Short Damage;
     @Info("The number of items in the stack")
+    @Min(0)
     public Byte Count;
     @Info("Additional information about the item")
     public ItemTagDef tag;

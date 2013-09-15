@@ -24,8 +24,8 @@ package me.bogeymanEST.cmdhelper.tagdef;
  * Time: 15:31
  */
 public class VillagerGolemDef extends MobDef {
-    @Info("1 or 0 - 1 if it was created by a player")
-    public Byte PlayerCreated;
+    @Info("1 if it was created by a player")
+    public Boolean PlayerCreated;
 
     @Override
     public String getName() {

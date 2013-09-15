@@ -25,7 +25,7 @@ package me.bogeymanEST.cmdhelper.tagdef;
  */
 public class PigDef extends MobDef {
     @Info("1 if the pig has a saddle")
-    public Byte Saddle;
+    public Boolean Saddle;
 
     @Override
     public String getName() {

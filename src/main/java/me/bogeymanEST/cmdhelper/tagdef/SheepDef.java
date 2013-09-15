@@ -24,9 +24,11 @@ package me.bogeymanEST.cmdhelper.tagdef;
  * Time: 15:16
  */
 public class SheepDef extends MobDef {
-    @Info("1 or 0 - 1 if the sheep is sheared")
-    public Byte Sheared;
-    @Info("1 - 16 - the color of the sheep")
+    @Info("1 if the sheep is sheared")
+    public Boolean Sheared;
+    @Info("0 - 15 - the color of the sheep")
+    @Min(0)
+    @Max(15)
     public Byte Color;
 
     @Override

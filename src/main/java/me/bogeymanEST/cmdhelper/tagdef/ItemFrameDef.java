@@ -27,6 +27,8 @@ public class ItemFrameDef extends HangingDef {
     @Info("The item that is in the item frame")
     public ItemDef Item;
     @Info("0.0 - 1.0, the chance the item will drop when the item frame breaks. 1.0 by default.")
+    @Min(0)
+    @Max(1)
     public Float ItemDropChance;
     @Info("The number of times the item has been rotated 90 degrees clockwise")
     public Byte ItemRotation;

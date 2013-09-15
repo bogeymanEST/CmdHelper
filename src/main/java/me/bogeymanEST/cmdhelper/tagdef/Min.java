@@ -38,5 +38,5 @@ public @interface Min {
      *
      * @return The minimum value
      */
-    public int value();
+    public double value();
 }

@@ -31,8 +31,8 @@ public class PotionEffectDef implements TagDef {
     public Byte Amplifier;
     @Info("The duration of the effect in ticks.")
     public Integer Duration;
-    @Info("1 or 0 - whether or not this is an effect provided by a beacon and therefore should be less intrusive on the screen.")
-    public Byte Ambient;
+    @Info("1 if this is an effect provided by a beacon and therefore should be less intrusive on the screen.")
+    public Boolean Ambient;
 
     @Override
     public String getName() {

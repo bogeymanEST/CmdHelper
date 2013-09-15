@@ -26,7 +26,7 @@ import java.util.List;
  * Time: 11:23
  */
 public class FireworksDef implements TagDef {
-    @Info("Number 0-3 indicating the flight duration of this firework.")
+    @Info("Number indicating the flight duration of this firework. Usually 0 - 3")
     public Byte Flight;
     @Info("List of explosions")
     public List<ExplosionDef> Explosions;

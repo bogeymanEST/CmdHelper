@@ -32,10 +32,10 @@ public class FallingSandDef extends DynamicTileDef {
     public Byte Data;
     @Info("The number of ticks the entity has existed. If set to 0, the moment it ticks to 1, it will vanish if the block at its location has a different ID than the entity's TileID. If the block at its location has the same ID as its TileID when Time ticks from 0 to 1, the block will instead be deleted, and the entity will continue to fall, having overwritten it.")
     public Byte Time;
-    @Info("1 or 0 - 1 if the block should drop an item when broken")
-    public Byte DropItem;
-    @Info("1 or 0 - 1 if the block should hurt entities it falls on")
-    public Byte HurtEntites;
+    @Info("1 if the block should drop an item when broken")
+    public Boolean DropItem;
+    @Info("1 if the block should hurt entities it falls on")
+    public Boolean HurtEntites;
     @Info("The maximum number of hitpoints of damage to inflict on entities that intersect this FallingSand.")
     public Integer FallHurtMax;
     @Info("Multiplied by the FallDistance to calculate the amount of damage to inflict.")

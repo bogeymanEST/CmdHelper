@@ -25,13 +25,13 @@ package me.bogeymanEST.cmdhelper.tagdef;
  */
 @SuppressWarnings({"UnusedDeclaration", "MismatchedReadAndWriteOfArray"})
 public abstract class EntityDef implements TagDef {
-    @TupleTag({"X", "Y", "Z"})
+    @Tuple({"X", "Y", "Z"})
     @Info("The position of the entity")
     public Double[] Pos;
-    @TupleTag({"X", "Y", "Z"})
+    @Tuple({"X", "Y", "Z"})
     @Info("The motion of the entity")
     public Double[] Motion;
-    @TupleTag({"Yaw", "Pitch"})
+    @Tuple({"Yaw", "Pitch"})
     @Info("The rotation of the entity")
     public Float[] Rotation;
     @Info("Distance the entity has fallen. Larger values cause more damage when the entity lands")
@@ -40,9 +40,9 @@ public abstract class EntityDef implements TagDef {
     public Short Fire;
     @Info("How much air the entity has, in ticks. Fills to a maximum of 300 in air, giving 15 seconds submerged before the entity starts to drown, and a total of up to 35 seconds before the entity dies (if it has 20 health). Decreases while underwater. If 0 while underwater, the entity loses 1 health per second.")
     public Short Air;
-    @Info("1 or 0 - 1 if the entity is touching the ground.")
+    @Info("1 if the entity is touching the ground.")
     public Boolean OnGround;
-    @Info("1 or 0 - 1 if the entity should not take damage. This applies to living and nonliving entities alike: mobs will not take damage from any source (including potion effects) and objects such as vehicles and item frames cannot be destroyed unless their supports are removed. Note that these entities also cannot be moved by fishing rods, attacks, explosions, or projectiles.")
+    @Info("1 if the entity should not take damage. This applies to living and nonliving entities alike: mobs will not take damage from any source (including potion effects) and objects such as vehicles and item frames cannot be destroyed unless their supports are removed. Note that these entities also cannot be moved by fishing rods, attacks, explosions, or projectiles.")
     public Boolean Invulnerable;
     @Info("The number of ticks before which the entity may be teleported back through a portal of any kind. Initially starts at 900 ticks (45 seconds) after teleportation and counts down to 0.")
     public Integer PortalCooldown;

@@ -27,7 +27,7 @@ public class PistonDef extends TileEntityDef {
     @Info("Direction in which a block will be pushed")
     public Integer facing;
     @Info("1 if the piston is pushing")
-    public Byte extending;
+    public Boolean extending;
 
     @Override
     public String getName() {

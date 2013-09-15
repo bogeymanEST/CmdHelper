@@ -28,7 +28,9 @@ public class ModifierDef implements TagDef {
     public String Name;
     @Info("The amount by which this Modifier modifies the Base value in calculations.")
     public Double Amount;
-    @Info(" 0, 1, or 2. Defines the operation this Modifier executes on the Attribute's Base value. 0: Increment X by Amount, 1: Increment Y by X * Amount, 2: Y = Y * (1 + Amount) (equivalent to Increment Y by Y * Amount). The game first sets X = Base, then executes all Operation 0 modifiers, then sets Y = X, then executes all Operation 1 modifiers, and finally executes all Operation 2 modifiers.")
+    @Info("0, 1, or 2. Defines the operation this Modifier executes on the Attribute's Base value. 0: Increment X by Amount, 1: Increment Y by X * Amount, 2: Y = Y * (1 + Amount) (equivalent to Increment Y by Y * Amount). The game first sets X = Base, then executes all Operation 0 modifiers, then sets Y = X, then executes all Operation 1 modifiers, and finally executes all Operation 2 modifiers.")
+    @Min(0)
+    @Max(2)
     public Integer Operation;
 
     @Override

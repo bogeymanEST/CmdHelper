@@ -44,20 +44,20 @@ public abstract class MobDef extends EntityDef {
     public List<AttributeDef> Attributes;
     @Info("The list of potion effects on this mob.")
     public List<PotionEffectDef> ActiveEffects;
-    @TupleTag({"Hand", "Feet", "Legs", "Chest", "Head"})
+    @Tuple({"Hand", "Feet", "Legs", "Chest", "Head"})
     @Info("List of equipment this mob has")
     public ItemDef[] Equipment;
-    @TupleTag({"Hand", "Feet", "Legs", "Chest", "Head"})
+    @Tuple({"Hand", "Feet", "Legs", "Chest", "Head"})
     @Info("List of float values (0.0 to 1.0) representing chance to drop the corresponding equipment item.")
     public Float[] DropChances;
-    @Info("1 or 0 - 1 if the mob can pick up loot (wear armor it picks up, use weapons it picks up).")
-    public Byte CanPickUpLoot;
-    @Info("1 or 0 - 1 if the mob must not despawn naturally.")
-    public Byte PersistenceRequired;
+    @Info("1 if the mob can pick up loot (wear armor it picks up, use weapons it picks up).")
+    public Boolean CanPickUpLoot;
+    @Info("1 if the mob must not despawn naturally.")
+    public Boolean PersistenceRequired;
     @Info("The custom name of this entity. Appears in player death messages and villager trading interfaces, as well as above the mob's head when your cursor is over it.")
     public String CustomName;
-    @Info("1 or 0 - if 1, and this mob has a custom name, it will always appear above their head, whether or not the cursor is pointing at it.")
-    public Byte CustomNameVisible;
+    @Info("if 1, and this mob has a custom name, it will always appear above their head, whether or not the cursor is pointing at it.")
+    public Boolean CustomNameVisible;
 
     @Override
     public String getName() {

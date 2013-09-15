@@ -25,7 +25,7 @@ package me.bogeymanEST.cmdhelper.tagdef;
  */
 public class CreeperDef extends MobDef {
     @Info("1 = powered(charged), 0 = not powered")
-    public Byte powered;
+    public Boolean powered;
     @Info("The radius of the creeper's explosion")
     public Byte ExplosionRadius;
     @Info("Number of ticks between a creeper 'hissing' and exploding")

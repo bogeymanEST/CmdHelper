@@ -24,7 +24,7 @@ package me.bogeymanEST.cmdhelper.tagdef;
  * Time: 10:36
  */
 public class ComparatorDef extends TileEntityDef {
-    @Info(" Represents the strength of the analog signal output by this redstone comparator.")
+    @Info("Represents the strength of the analog signal output by this redstone comparator.")
     public Integer OutputSignal;
 
     @Override

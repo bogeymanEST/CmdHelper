@@ -28,14 +28,16 @@ import java.util.List;
 public class EntityHorseDef extends MobDef {
 
     @Info("1 = horse has chests")
-    public Byte ChestedHorse;
+    public Boolean ChestedHorse;
     @Info("1 = horse is grazing")
-    public Byte EatingHaystack;
+    public Boolean EatingHaystack;
     @Info("1 = horse is tamed")
-    public Byte Tame;
+    public Boolean Tame;
     @Info("0 - 100, higher values make the horse easier to tame")
     public Integer Temper;
     @Info("The type of the horse. 0 = Horse, 1= Donkey, 2= Mule, 3 = Zombie, 4 = Skeleton.")
+    @Min(0)
+    @Max(4)
     public Integer Type;
     @Info("The variant of the horse. Determines colors.")
     public Integer Variant;

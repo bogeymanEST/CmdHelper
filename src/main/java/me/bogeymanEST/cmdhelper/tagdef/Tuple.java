@@ -32,7 +32,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface TupleTag {
+public @interface Tuple {
     /**
      * Sets the names of all the values.
      *

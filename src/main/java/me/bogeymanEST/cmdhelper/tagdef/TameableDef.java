@@ -26,8 +26,8 @@ package me.bogeymanEST.cmdhelper.tagdef;
 public class TameableDef extends MobDef {
     @Info("The name of this mob's owner")
     public String Owner;
-    @Info("1 or 0 - 1 if the mob is sitting.")
-    public Byte Sitting;
+    @Info("1 if the mob is sitting.")
+    public Boolean Sitting;
 
     @Override
     public String getName() {

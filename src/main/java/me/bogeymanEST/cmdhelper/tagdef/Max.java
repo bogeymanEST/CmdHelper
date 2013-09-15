@@ -38,5 +38,5 @@ public @interface Max {
      *
      * @return The maximum value
      */
-    public int value();
+    public double value();
 }

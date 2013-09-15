@@ -31,5 +31,7 @@ public abstract class HangingDef extends EntityDef {
     @Info("Z location")
     public Integer TileZ;
     @Info("Direction that this entity faces. 0=S, 1=W, 2=N, 3=E")
+    @Min(0)
+    @Max(3)
     public Byte Direction;
 }

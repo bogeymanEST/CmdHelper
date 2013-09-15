@@ -25,6 +25,8 @@ package me.bogeymanEST.cmdhelper.tagdef;
  */
 public class OzelotDef extends TameableDef {
     @Info("The ID of the skin the ocelot has. 0 is wild ocelot, 1 is tuxuedo, 2 is tabby and 3 is siamese. Does not determine an ocelot's behavior: it will be wild unless its Owner string is not empty, meaning wild ocelots can look like cats and vice versa.")
+    @Min(0)
+    @Max(3)
     public Integer CatType;
 
     @Override

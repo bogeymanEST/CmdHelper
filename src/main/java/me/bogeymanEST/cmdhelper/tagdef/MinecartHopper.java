@@ -24,6 +24,7 @@ package me.bogeymanEST.cmdhelper.tagdef;
  * Time: 10:17
  */
 public class MinecartHopper extends MinecartChest {
+    @Info("Time until the next transfer, usually between 1 and 8, or 0 if there is no transfer.")
     public Integer TransferCooldown;
 
     @Override

@@ -25,6 +25,8 @@ package me.bogeymanEST.cmdhelper.tagdef;
  */
 public class SkeletonDef extends MobDef {
     @Info("0 for normal skeleton, 1 for wither skeleton.")
+    @Min(0)
+    @Max(1)
     public Byte SkeletonType;
 
     @Override

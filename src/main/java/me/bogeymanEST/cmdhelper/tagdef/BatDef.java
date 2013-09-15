@@ -25,7 +25,7 @@ package me.bogeymanEST.cmdhelper.tagdef;
  */
 public class BatDef extends MobDef {
     @Info("1 when hanging upside-down from a block, 0 when flying.\n")
-    public Byte BatFlags;
+    public Boolean BatFlags;
 
     @Override
     public String getName() {
