@@ -16,27 +16,37 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-package me.bogeymanEST.cmdhelper.spawnable;
+package me.bogeymanEST.cmdhelper;
 
-import javax.swing.tree.TreeNode;
+import me.bogeymanEST.cmdhelper.output.Output;
+import me.bogeymanEST.cmdhelper.tagdef.TagDef;
+
+import java.lang.reflect.Field;
 
 /**
+ * Used in displaying a field value in a JTree.
+ * <p/>
  * User: Bogeyman
- * Date: 11.09.13
- * Time: 17:31
+ * Date: 14.09.13
+ * Time: 13:38
  */
-public interface Spawnable {
-    /**
-     * Gets a node to display in a {@link javax.swing.JTree} as the root.
-     *
-     * @return The root node
-     */
-    public TreeNode getRootNode();
+public class TagDefField {
+    private TagDef tag;
+    private Field field;
 
-    /**
-     * Gets this spawnable's data as a string to be passed into a Minecraft command (e.g. /summon).
-     *
-     * @return The spawnable's data
-     */
-    public String getDataString();
+    public TagDefField(TagDef tag, Field field) {
+        this.tag = tag;
+        this.field = field;
+    }
+
+    @Override
+    public String toString() {
+        Output o = new Output(false);
+        try {
+            return field.getName() + " = " + o.get(field.get(tag));
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return "ERROR";
+    }
 }

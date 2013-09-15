@@ -16,33 +16,19 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-package me.bogeymanEST.cmdhelper.spawnable;
-
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.TreeNode;
+package me.bogeymanEST.cmdhelper.tagdef;
 
 /**
  * User: Bogeyman
- * Date: 11.09.13
- * Time: 18:10
+ * Date: 14.09.13
+ * Time: 10:21
  */
-public abstract class AbstractSpawnable implements Spawnable {
-    DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(this);
+public class PrimedTntDef extends DynamicTileDef {
+    @Info("Ticks until explosion")
+    public Byte Fuse;
 
     @Override
-    public TreeNode getRootNode() {
-        return rootNode;
-    }
-
-    /**
-     * Gets a string name of this spawnable
-     *
-     * @return The string to display in the tree in the GUI.
-     */
-    public abstract String getString();
-
-    @Override
-    public String toString() {
-        return getString();
+    public String getName() {
+        return "PrimedTNT";
     }
 }

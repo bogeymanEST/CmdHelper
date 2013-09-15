@@ -16,22 +16,18 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-package me.bogeymanEST.cmdhelper.spawnable;
+package me.bogeymanEST.cmdhelper.tagdef;
 
 /**
  * User: Bogeyman
- * Date: 11.09.13
- * Time: 17:52
+ * Date: 14.09.13
+ * Time: 10:17
  */
-public class Entity extends AbstractSpawnable {
+public class MinecartHopper extends MinecartChest {
+    public Integer TransferCooldown;
 
     @Override
-    public String getDataString() {
-        return "{hello: 'goodbye'}";
-    }
-
-    @Override
-    public String getString() {
-        return "Entity";
+    public String getName() {
+        return "MinecartHopper";
     }
 }

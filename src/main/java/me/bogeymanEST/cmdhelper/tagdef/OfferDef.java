@@ -16,22 +16,21 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-package me.bogeymanEST.cmdhelper.spawnable;
+package me.bogeymanEST.cmdhelper.tagdef;
+
+import java.util.List;
 
 /**
  * User: Bogeyman
- * Date: 11.09.13
- * Time: 18:06
+ * Date: 13.09.13
+ * Time: 15:24
  */
-public class Item extends AbstractSpawnable {
+public class OfferDef implements TagDef {
+    @Info("List of trade options")
+    public List<TradeOfferDef> Recipes;
 
     @Override
-    public String getString() {
-        return "Item";
-    }
-
-    @Override
-    public String getDataString() {
-        return "item";
+    public String getName() {
+        return "Offer";
     }
 }
